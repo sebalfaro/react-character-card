@@ -1,19 +1,25 @@
 {
-  "name": "react-lib-characters",
-  "private": true,
-  "version": "0.0.0",
+  "name": "react-character-card",
+  "private": false,
+  "version": "0.0.3",
   "type": "module",
+  "files": [
+    "dist"
+  ],
+  "exports": "./dist/main.js",
+  "module": "./dist/main.js",
+  "types": "./dist/main.d.ts",
   "scripts": {
-    "dev": "vite",
-    "build": "tsc -b && vite build",
-    "lint": "eslint .",
-    "preview": "vite preview"
+    "build": "tsc -b && vite build"
   },
-  "dependencies": {
+  "peerDependencies": {
+    "glob": "^11.0.1",
     "react": "^19.0.0",
     "react-dom": "^19.0.0"
   },
   "devDependencies": {
+        "react": "^19.0.0",
+    "react-dom": "^19.0.0",
     "@eslint/js": "^9.21.0",
     "@types/node": "^22.14.0",
     "@types/react": "^19.0.10",

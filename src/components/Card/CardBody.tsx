@@ -1,5 +1,5 @@
 import { ReactNode } from "react";
-import styles from "@styles/molecules/cardBody.module.scss";
+import styles from "../../styles/molecules/cardBody.module.scss";
 import { Size } from "../../types";
 
 interface Props {

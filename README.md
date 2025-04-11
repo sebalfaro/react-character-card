@@ -1,54 +1,91 @@
-# React + TypeScript + Vite
+## CharacterCard Library
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Esta librería provee una componente UI del tipo Card creado en React + Typescript, para su reutilización
 
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
-
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
-
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
-```
+**Correr el proyecto de forma local**
+- Clonar el [repositorio](https://github.com/sebalfaro/character-card)
+ - Instalar las dependencias de forma local
+	 - `npm run i`
+ - Correr el servidor de desarrollo
+	 - `npm run dev`
+- El proyecto tiene test unitarios de 1 componente, para ejectuarlo
+	 - `npm run test`
+	
+**Utilizar la librería como dependencia en un proyecto React**
+- La libería se encuentra publicada en [npm](https://www.npmjs.com/package/@sebalfaro/card-library)
+ - Para utilizarla puede en un proyecto React ejecute el comando
+	 - `npm i @sebalfaro/card-library`
+- La card tiene 3 variantes 
+	- **small**
+		```typescript
+		 <Card size="s">
+		   <Card.Top size="s">
+		     <Card.FavChip position="right" />
+		     <Card.Media imgPath={img} alt="character image" />
+		   </Card.Top>
+		   <Card.Body size="s">
+		     <Card.Title>Morty Smith</Card.Title>
+		     <Card.Text>Humano</Card.Text>
+		   </Card.Body>
+		 </Card>
+		```     
+	- **medium**
+		```typescript
+	      <Card size="m">
+	        <Card.Top size="m">
+	          <Card.FavChip position="left" />
+	          <Card.Media imgPath={img} alt="character image" />
+	        </Card.Top>
+	        <Card.Body size="m">
+	          <Card.Heading>
+	            <Card.Column>
+	              <Card.Title>Morty Smith</Card.Title>
+	              <Card.Text>Humano</Card.Text>
+	            </Card.Column>
+	            <Card.Column>
+	              <Card.Chip text="Vivo" status="active" />
+	            </Card.Column>
+	          </Card.Heading>
+	          <Card.Box>
+	            <Card.Column>
+	              <Card.Bold>Last known location</Card.Bold>
+	              <Card.Text>Story Train</Card.Text>
+	            </Card.Column>
+	            <Card.Column>
+	              <Card.Bold>First seen in</Card.Bold>
+	              <Card.Text>Never Ricking Morty</Card.Text>
+	            </Card.Column>
+	          </Card.Box>
+	        </Card.Body>
+	      </Card>
+		```
+	- **large**
+		```typescript
+	      <Card size="l">
+	        <Card.Top size="l">
+	          <Card.FavChip position="left" />
+	          <Card.Media imgPath={img} alt="character image" />
+	        </Card.Top>
+	        <Card.Body size="l">
+	          <Card.Heading>
+	            <Card.Column>
+	              <Card.Title>Morty Smith</Card.Title>
+	              <Card.Text>Humano</Card.Text>
+	            </Card.Column>
+	            <Card.Column>
+	              <Card.Chip text="Vivo" status="active" />
+	            </Card.Column>
+	          </Card.Heading>
+	          <Card.Box>
+	            <Card.Column>
+	              <Card.Bold>Last known location</Card.Bold>
+	              <Card.Text>Story Train</Card.Text>
+	            </Card.Column>
+	            <Card.Column>
+	              <Card.Bold>First seen in</Card.Bold>
+	              <Card.Text>Never Ricking Morty</Card.Text>
+	            </Card.Column>
+	          </Card.Box>
+	        </Card.Body>
+	      </Card>
+		```

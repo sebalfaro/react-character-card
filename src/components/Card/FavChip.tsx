@@ -1,6 +1,6 @@
 import { useState } from "react";
-import styles from "@styles/atoms/favChip.module.scss";
-import StarIcon from "@components/ui/icons/Star";
+import styles from "../../styles/atoms/favChip.module.scss";
+import StarIcon from "../../components/ui/icons/Star";
 
 type Position = "right" | "left";
 
