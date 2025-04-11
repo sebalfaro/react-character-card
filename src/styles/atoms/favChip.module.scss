@@ -1,0 +1,50 @@
+@use '../abstracts/variables' as *;
+
+.favChip {
+  all: unset;
+  background-color: $baseW;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border: none;
+  border-radius: 50%;
+  top: 0.5rem;
+
+  &:focus-visible {
+    outline: none;
+    outline-offset: unset;
+    border: none;
+  }
+
+  &:hover {
+    outline: none;
+    outline-offset: unset;
+    border: none;
+    background-color: none;
+  }
+
+  &:disabled {
+    outline: none;
+    outline-offset: unset;
+    border: none;
+  }
+}
+.left {
+  left: 0.5rem;
+}
+.right {
+  right: 0.5rem;
+}
+.fav {
+  background-color: $primaryLight;
+}
+.notFav {
+  background-color: $baseW;
+}
+.disable {
+  background-color: $neutralLight;
+}

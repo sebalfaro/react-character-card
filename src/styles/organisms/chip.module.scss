@@ -1,0 +1,23 @@
+@use '../abstracts/variables' as *;
+
+.cardChip {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 6px 12px;
+  border-radius: 16px;
+  gap: 8px;
+  font-family: $primaryFont;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 20px;
+}
+.active {
+  background-color: $primaryExtraLight;
+  color: $primaryExtraDark;
+}
+.inactive {
+  background-color: $neutralLight;
+  color: $dark;
+}

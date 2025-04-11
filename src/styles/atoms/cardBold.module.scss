@@ -1,0 +1,10 @@
+@use '../abstracts/variables' as *;
+
+.cardBold {
+  font-family: $primaryFont;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 100%;
+  margin: 0 0 8px 0;
+  color: $neutralDark;
+}

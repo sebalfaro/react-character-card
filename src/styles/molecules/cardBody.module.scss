@@ -1,0 +1,20 @@
+@use '../abstracts/variables' as *;
+
+.cardBody {
+  grid-column: 2;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+.sizeS {
+  padding: 0.5rem 1rem 1rem;
+}
+.sizeM {
+  justify-content: space-between;
+  padding: 12px 5px 16px 16px;
+}
+.sizeL {
+  flex: 1;
+  justify-content: space-between;
+  padding: 16px 16px 24px 16px;
+}

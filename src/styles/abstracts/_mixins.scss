@@ -1,0 +1,20 @@
+// Mixins
+$breakpoints: (
+  md-s: 320px,
+  md-m: 375px,
+  lg-m: 425px,
+  ls-m: 576px,
+  t: 768px,
+  n: 992px,
+  d: 1040px,
+  ld: 1280px,
+  lg-d: 1440px,
+  xl-d: 1600px,
+);
+
+// Create mixin mobile first approach
+@mixin display($breakpoint) {
+  @media (min-width: #{map-get($breakpoints, $breakpoint)}) {
+    @content;
+  }
+}
