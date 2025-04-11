@@ -10,7 +10,8 @@ Esta librería provee una componente UI del tipo Card creado en React + Typescri
 	 - `npm run dev`
 - El proyecto tiene test unitarios de 1 componente, para ejectuarlo
 	 - `npm run test`
-	
+- La version para empaquetar la libreria se encuenta en la rama `lib`
+3	
 **Utilizar la librería como dependencia en un proyecto React**
 - La libería se encuentra publicada en [npm](https://www.npmjs.com/package/@sebalfaro/card-library)
  - Para utilizarla puede en un proyecto React ejecute el comando
