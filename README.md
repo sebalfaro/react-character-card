@@ -14,7 +14,7 @@ Esta librería provee una componente UI del tipo Card creado en React + Typescri
 **Utilizar la librería como dependencia en un proyecto React**
 - La libería se encuentra publicada en [npm](https://www.npmjs.com/package/@sebalfaro/card-library)
  - Para utilizarla puede en un proyecto React ejecute el comando
-	 - `npm i @sebalfaro/card-library`
+	 - `npm i react-character-card`
 - La card tiene 3 variantes 
 	- **small**
 		```typescript
