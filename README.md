@@ -1,6 +1,6 @@
 ## CharacterCard Library
 
-Esta librería provee una componente UI del tipo Card creado en React + Typescript, para su reutilización
+Esta librería provee una componente UI del tipo Card creada con React, Typescript, SASS y Vite para su reutilización
 
 **Correr el proyecto de forma local**
 - Clonar el [repositorio](https://github.com/sebalfaro/character-card)
