@@ -6,9 +6,10 @@ type Position = "right" | "left";
 
 interface Props {
   position: Position;
+  onClickHandler: () => void;
 }
 
-export const FavChip = ({ position }: Props) => {
+export const FavChip = ({ position, onClickHandler }: Props) => {
   const [isFav, setIsFav] = useState<boolean>(false);
   const chipPosition = {
     right: styles.right,
@@ -17,6 +18,7 @@ export const FavChip = ({ position }: Props) => {
 
   const handleOnClick = () => {
     setIsFav(!isFav);
+    onClickHandler()
   };
 
   return (
