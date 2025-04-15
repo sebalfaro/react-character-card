@@ -5,12 +5,13 @@ import StarIcon from "../../components/ui/icons/Star";
 type Position = "right" | "left";
 
 interface Props {
+  isFavCharacter: boolean;
   position: Position;
   onClickHandler: () => void;
 }
 
-export const FavChip = ({ position, onClickHandler }: Props) => {
-  const [isFav, setIsFav] = useState<boolean>(false);
+export const FavChip = ({ isFavCharacter, position, onClickHandler }: Props) => {
+  const [isFav, setIsFav] = useState<boolean>(isFavCharacter);
   const chipPosition = {
     right: styles.right,
     left: styles.left,
@@ -18,7 +19,7 @@ export const FavChip = ({ position, onClickHandler }: Props) => {
 
   const handleOnClick = () => {
     setIsFav(!isFav);
-    onClickHandler()
+    onClickHandler();
   };
 
   return (
